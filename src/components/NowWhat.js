@@ -7,6 +7,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { withStyles } from "@material-ui/core/styles";
 import AvatarRaw from "@material-ui/core/Avatar";
+import { Link } from "react-router-dom";
 
 const cardStyles = theme => ({
   root: {
@@ -56,6 +57,14 @@ const NowWhat = props => {
           <ListItem>
             <Avatar>4</Avatar>
             <ListItemText primary="Submit Your App" />
+          </ListItem>
+          <ListItem>
+            <Avatar>5</Avatar>
+            <ListItemText>
+              <Link to={"/googlemap"}>
+                App
+              </Link>
+            </ListItemText>
           </ListItem>
         </List>
       </CardContent>
