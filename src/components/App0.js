@@ -1,5 +1,4 @@
 import App from "../App";
-import Dashboard from "./Dashboard";
 import GoogleMap from "./Mapd";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import React from "react";
@@ -11,7 +10,6 @@ const App0 = props => (
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path={"/dashboard"} component={Dashboard} />
         <Route path={"/googlemap"} component={GoogleMap} />
         <Route path={"/"} component={App} />
       </Switch>
