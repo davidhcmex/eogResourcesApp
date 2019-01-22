@@ -3,5 +3,5 @@ import findWeatherbyId from "./findWeatherById";
 
 export default {
   findLocationByLatLng,
-  findWeatherbyId
+  findWeatherbyId,
 };

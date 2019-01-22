@@ -54,8 +54,6 @@ class Map extends Component {
             >
                 {
                     singleItem.map((item) => {
-                        let tmpData = this.state.pollData.pop()
-                        console.log(tmpData)
                         return (<Marker
                             key={item.timestamp}
                             position={{ lat: (this.state.pollData.length !== 0 ? this.state.pollData.pop().latitude : item.latitude), lng: (this.state.pollData.length !== 0 ? this.state.pollData.pop().longitude : item.longitude) }}
@@ -135,9 +133,14 @@ class Map extends Component {
                             />
                             <br />
                             <br />
-                            <Button style ={{backgroundColor:"skyblue"}} color="primary" onClick={this.showLbl}>
+                            <Button style={{ backgroundColor: "skyblue" }} color="primary" onClick={this.showLbl}>
                                 Poll Location and Show On Map (on the Left)
                             </Button>
+
+                        </TableCell>
+                    </TableRow>
+                    <TableRow >
+                        <TableCell>
 
                         </TableCell>
                     </TableRow>
@@ -157,6 +160,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         loadData: () => dispatch(actions.loadData()),
-    }
+    };
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Map)
